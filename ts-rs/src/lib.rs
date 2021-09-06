@@ -30,6 +30,7 @@ pub use ts_rs_macros::TS;
 
 #[doc(hidden)]
 pub mod export;
+mod external;
 
 /// A type which can be represented in TypeScript.  
 /// Most of the time, you'd want to derive this trait instead of implementing it manually.  
