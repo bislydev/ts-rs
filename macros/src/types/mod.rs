@@ -13,7 +13,7 @@ mod tuple;
 mod unit;
 
 pub(crate) fn struct_def(s: &ItemStruct) -> Result<DerivedTS> {
-    let StructAttr { rename_all, rename } = StructAttr::from_attrs(&s.attrs)?;
+    let StructAttr { rename_all, rename, tag: _ } = StructAttr::from_attrs(&s.attrs)?;
     let name = rename.unwrap_or_else(|| s.ident.to_string());
 
     type_def(&name, &rename_all, &s.fields, &s.generics)

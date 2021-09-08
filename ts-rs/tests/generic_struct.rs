@@ -13,6 +13,12 @@ where
 }
 
 #[derive(TS)]
+struct Generic2<T> {
+    value: T,
+    values: Vec<T>,
+}
+
+#[derive(TS)]
 struct Container {
     foo: Generic<u32>,
     bar: Vec<Generic<u32>>,
